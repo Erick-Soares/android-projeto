@@ -56,6 +56,7 @@ header{
 header > h1, p{
     text-align: center;
     margin: 16px;
+    padding: 2px;
 }
 
 header > nav > a{
