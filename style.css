@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Android';
+    src: url(idroid.otf) format('opentype');
+    font-weight: normal;
+    /*
+    USANDO UMA FONTE JA EXISTENTE EM SEU PC 
+    */
+}
+
+:root{
+    --cor1: #84E1AD;
+    --cor2: #3CD781;
+    --cor3: #185934;
+    --cor4: #647a6e;
+
+    --fonte-padrao: cursive ,Georgia, sans-serif;
+    --fonte-droid: 'Android', 'Times New Roman';
+  /*
+    VARIAVEIS, USO MAIS PRATICO
+  */
+}
+
+*{
+    /*  --> CONFIGURAÇÃO GLOBAL <--   */
+
+    margin-top: 0px;
+    margin-bottom: 1px;
+
+    /*TIRANDO AS MARGENS SUPERIORES E INFERIORES PARA O CABEÇALHO GRUDAR NO TOPO*/
+
+}
+
+body{
+    background-color: rgb(245, 245, 204);
+    /*padding: 35px;
+    padding-top: 2px;
+    padding-bottom: 2px;*/
+
+    
+}
+
+
+header{
+    font: bold 17px var(--fonte-padrao);
+    background-image: linear-gradient(to top, #185934, #3CD781);
+    padding: 20px;
+    color: white;
+
+    /*NAO USAR MAIS O MARGIN LEFT E RIGHT DESSA FORMA
+      PARECE ARMENGUE
+    */
+}
+
+header > h1, p{
+    text-align: center;
+    margin: 16px;
+}
+
+header > nav > a{
+    margin-left: 12px;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    transition-duration: 0.7s;
+}
+
+header > nav > a:hover{
+    background-color: var(--cor4);
+    box-shadow:inset 1px 1px 3px black;
+}
+
+
+
+main{
+    font-family: var(--fonte-padrao);
+    justify-content: left;
+    padding: 0.5px;
+    background-color: white;
+
+}
+
+.personah2{
+    font-family: var(--fonte-droid);
+    background-image: linear-gradient(to right, var(--cor2), transparent);
+    color: green;
+}
+
+main > h1{
+    font-family: var(--fonte-droid);   
+}
+
+main > div{
+    border: 40px;
+    border-color: forestgreen;
+}
+
+main > p{
+    text-align: justify;
+    text-indent: 20px; /*RECUO NO INICIO DO PARAGRAFO*/
+    line-height: 1.5em; /*ALTURA ENTRE AS LINHAS*/
+}
+
+main > article > section > p{
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 1.5em;
+}
+
+.linkext{
+    font-weight: bold;
+    color: var(--cor3);
+    text-decoration: none;
+}
+
+.linkext::after{
+    content: '\1F517';
+}
+
+ .linkext:hover{
+    text-decoration: underline;
+    color: var(--cor2);
+}
+
+.st{
+    color: #076932;
+    font-weight: bold;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.videozao{
+    background-color: var(--cor2);
+    padding: 30px;
+    position: relative;
+    padding-bottom: 52.5%; /*FAZ AS BARRAS PRETAS DO VIDEO SUMIREM*/
+}
+
+.videozao > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+.final{
+    background-color: white;
+    padding: 2px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* 
+
+    ---> ESSA DIV FINAL DEVERIA SER UM ASIDE <---
+    
+    */
+}
+
+.final > div{
+    background-color: #84E1AD;
+    margin: 10px;
+    border-radius: 18px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.336);
+}
+
+.final > div > p{
+    text-align: justify;
+}
+
+.final > div > h3{
+    padding: 8px;
+    color: white;
+    background-color:#2FA866;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.lista{
+    justify-content: space-between;
+    columns: 2;
+    margin: auto;
+    
+}
+
+main > ul{
+    list-style-type: none;
+    padding: 0px;
+    /*list-style-position também funciona*/
+
+}
+
+.list-right, .list-left{
+    flex: 1;
+}
+
+
+footer{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    padding: 2px;
+    background-color: rgb(2, 72, 2);
+    color: white;
+    border-radius: 10px;
+}
+
+footer > p{
+    margin: 0px;
+}
